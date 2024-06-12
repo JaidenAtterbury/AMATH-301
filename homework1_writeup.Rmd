@@ -1,0 +1,99 @@
+---
+title: "AMATH 301 Homework 1 Writeup"
+subtitle: "Jaiden Atterbury - Section B"
+output: pdf_document
+date: "01-09-2023"
+---
+
+```{r setup, include = FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+library(reticulate)
+```
+
+```{python,  echo = FALSE}
+import numpy as np
+import matplotlib.pyplot as plt
+```
+
+**Problem 1:**
+
+**Plot:**
+
+```{python, echo = FALSE}
+x = np.arange(-5, 5+0.5, 0.5)
+y = x
+plt.figure(1)
+plt.plot(x, y, "k")
+plt.plot(x, y, "bo")
+plt.xlabel("x")
+plt.ylabel("y")
+plt.title(r' Plotting $f(x) = x$ using PyPlot')
+plt.show()
+```
+
+**Analysis:** $\\$
+Q: Explain the connection between the blue circles in the plot and the black
+curve (e.g., how are they related?).
+
+A: The connection between the blue circles in the plot and the black curve can
+be explained entirely by looking at the x and y arrays. In particular they both
+have the same elements, those being `r py$x`. With that said, the blue dots
+on the black curve represent the ordered pairs (x,y) that pyplot uses to make
+the curve by attaching lines between these ordered pairs.
+
+**Code Used:**
+```{python, eval = FALSE}
+# Imports
+import numpy as np
+import matplotlib.pyplot as plt
+
+# Problem 1
+x = np.arange(-5, 5+0.5, 0.5)
+y = x
+plt.figure(1)
+plt.plot(x, y, "k")
+plt.plot(x, y, "bo")
+plt.xlabel("x")
+plt.ylabel("y")
+plt.title(r' Plotting $f(x) = x$ using PyPlot')
+plt.show()
+```
+
+**Problem 2:**
+
+**Description:**
+Create another figure similar to the previous figure except representing the
+function $f(x) = x^{2}$. Add a title to the figure explaining what is being
+plotted.
+
+**Plot:**
+
+```{python, echo = FALSE}
+x = np.arange(-5, 5+0.5, 0.5)
+y = x ** 2
+plt.figure(2)
+plt.plot(x, y, "k")
+plt.plot(x, y, "bo")
+plt.xlabel("x")
+plt.ylabel("y")
+plt.title(r' Plotting $f(x) = x^2$ using PyPlot')
+plt.show()
+```
+
+**Code Used:**
+```{python, eval = FALSE}
+# Imports
+import numpy as np
+import matplotlib.pyplot as plt
+
+# Problem 2
+x = np.arange(-5, 5+0.5, 0.5)
+y = x ** 2
+plt.figure(2)
+plt.plot(x, y, "k")
+plt.plot(x, y, "bo")
+plt.xlabel("x")
+plt.ylabel("y")
+plt.title(r' Plotting $f(x) = x^2$ using PyPlot')
+plt.show()
+```
